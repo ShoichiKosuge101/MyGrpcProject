@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+  #gRPC (ASP.NET Core)
+  app:
+    container_name: 'greeter'
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5094:80"
+      - "7094:443"
+    environment:
+      TZ: Asia/Tokyo
+    volumes:
+      - ./ssl_greeter.crt:/etc/ssl/certs/ssl_greeter.crt
+      - ./ssl_greeter.key:/etc/ssl/private/ssl_greeter.key
+    tty: true
+    restart: always
+    stdin_open: true
