@@ -19,3 +19,4 @@ C:\Users\simil\GitProject\MyGrpcProject\GrpcGreeterClient\obj\Debug\net7.0\refin
 C:\Users\simil\GitProject\MyGrpcProject\GrpcGreeterClient\obj\Debug\net7.0\GrpcGreeterClient.pdb
 C:\Users\simil\GitProject\MyGrpcProject\GrpcGreeterClient\obj\Debug\net7.0\GrpcGreeterClient.genruntimeconfig.cache
 C:\Users\simil\GitProject\MyGrpcProject\GrpcGreeterClient\obj\Debug\net7.0\ref\GrpcGreeterClient.dll
+C:\Users\simil\GitProject\MyGrpcProject\GrpcGreeterClient\bin\Debug\net7.0\NLog.dll

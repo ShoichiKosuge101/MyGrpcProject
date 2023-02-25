@@ -10,7 +10,8 @@
         "dependencies": {
           "Google.Protobuf": "3.22.0",
           "Grpc.Net.Client": "2.51.0",
-          "Grpc.Tools": "2.51.0"
+          "Grpc.Tools": "2.51.0",
+          "NLog": "5.1.2"
         },
         "runtime": {
           "GrpcGreeterClient.dll": {}
@@ -67,6 +68,14 @@
           }
         }
       },
+      "NLog/5.1.2": {
+        "runtime": {
+          "lib/netstandard2.0/NLog.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.1.2.1561"
+          }
+        }
+      },
       "System.Memory/4.5.3": {}
     }
   },
@@ -117,6 +126,13 @@
       "sha512": "sha512-m2Jyi/MEn043WMI1I6J1ALuCThktZ93rd7eqzYeLmMcA0bdZC+TBVl0LuEbEWM01dWeeBjOoagjNwQTzOi2r6A==",
       "path": "microsoft.extensions.logging.abstractions/3.0.3",
       "hashPath": "microsoft.extensions.logging.abstractions.3.0.3.nupkg.sha512"
+    },
+    "NLog/5.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-JfQY93ure3IPVTN3eabBewBGvrcXcWIlaesFEXdy5UzIymfIT9yCgLISYtM0cOhjWziIaUr/6Z9NC2RwtjwrsQ==",
+      "path": "nlog/5.1.2",
+      "hashPath": "nlog.5.1.2.nupkg.sha512"
     },
     "System.Memory/4.5.3": {
       "type": "package",
