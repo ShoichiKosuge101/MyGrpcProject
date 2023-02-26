@@ -8,7 +8,7 @@ var _logger = LogManager.GetCurrentClassLogger();
 
 // ipconfigにてip check
 // docker container ls にてport check
-var server = "https://172.24.128.1:7094";
+var server = "https://172.24.143.114:7094";
 _logger.Info(server);
 
 try
@@ -26,7 +26,8 @@ try
     var client = new Greeter.GreeterClient(channel);
 
     var response = await client.SayHelloAsync(new HelloRequest{Name = "World"});
-    _logger.Info(response.Message);
+    _logger.Error(response);
+    _logger.Error(response.Message);
 }
 catch(Exception ex)
 {
