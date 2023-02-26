@@ -1,0 +1,81 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/skosuge/workspace/MyGrpcProject/GrpcGreeterClient/GrpcGreeterClient.csproj": {}
+  },
+  "projects": {
+    "/home/skosuge/workspace/MyGrpcProject/GrpcGreeterClient/GrpcGreeterClient.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/skosuge/workspace/MyGrpcProject/GrpcGreeterClient/GrpcGreeterClient.csproj",
+        "projectName": "GrpcGreeterClient",
+        "projectPath": "/home/skosuge/workspace/MyGrpcProject/GrpcGreeterClient/GrpcGreeterClient.csproj",
+        "packagesPath": "/home/skosuge/.nuget/packages/",
+        "outputPath": "/home/skosuge/workspace/MyGrpcProject/GrpcGreeterClient/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/skosuge/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Google.Protobuf": {
+              "target": "Package",
+              "version": "[3.22.0, )"
+            },
+            "Grpc.Net.Client": {
+              "target": "Package",
+              "version": "[2.51.0, )"
+            },
+            "Grpc.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.51.0, )"
+            },
+            "nlog": {
+              "target": "Package",
+              "version": "[5.1.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.201/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

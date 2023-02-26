@@ -12,6 +12,9 @@
 
   <ItemGroup>
     <PackageReference Include="Grpc.AspNetCore" Version="2.49.0" />
+    <PackageReference Include="nlog" Version="5.1.2" />
+    <PackageReference Include="NLog.Web" Version="5.2.2" />
+    <PackageReference Include="NLog.Web.AspNetCore" Version="5.2.2" />
   </ItemGroup>
 
 </Project>
