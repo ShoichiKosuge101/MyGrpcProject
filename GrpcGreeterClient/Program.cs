@@ -2,20 +2,34 @@
 using System.Threading.Tasks;
 using Grpc.Net.Client;
 using GrpcGreeterClient;
+using NLog;
 
-// // See https://aka.ms/new-console-template for more information
-// Console.WriteLine("Hello, World!");
+var _logger = LogManager.GetCurrentClassLogger();
 
-var server = "https://172.24.128.1:7094";
-var option = new GrpcChannelOptions()
+// ipconfigにてip check
+// docker container ls にてport check
+var server = "https://172.24.143.114:7094";
+_logger.Info(server);
+
+try
 {
-    HttpClient = new HttpClient(new HttpClientHandler
+    var option = new GrpcChannelOptions()
     {
-        ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator,
-    })
-};
+        HttpClient = new HttpClient(new HttpClientHandler
+        {
+            // SSL証明書の検証で常に True を返す
+            ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator,
+        })
+    };
 
-var channel = GrpcChannel.ForAddress(server, option);
-var client = new Greeter.GreeterClient(channel);
+    var channel = GrpcChannel.ForAddress(server, option);
+    var client = new Greeter.GreeterClient(channel);
 
-var reponse = await client.SayHelloAsync(new HelloRequest{Name = "World"});
+    var response = await client.SayHelloAsync(new HelloRequest{Name = "World"});
+    _logger.Error(response);
+    _logger.Error(response.Message);
+}
+catch(Exception ex)
+{
+    _logger.Error(ex);
+}
